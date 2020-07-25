@@ -1,0 +1,10 @@
+.DS_Store
+coverage
+node_modules
+node_modules/
+packages/**/lib
+*.log
+.env
+yarn.lock
+tests_output
+lib

@@ -1,0 +1,111 @@
+{
+  "name": "@ali/seenew-flow-engine",
+  "version": "1.0.14",
+  "description": "流程执行引擎",
+  "main": "lib/index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "def dev",
+    "test": "def test",
+    "build": "rm -fr lib && tsc && copyfiles -u 1 ./src/**/*.scss ./src/*.scss ./lib",
+    "prepublishOnly": "tnpm version patch && git push",
+    "postversion": "git push origin"
+  },
+  "dependencies": {
+    "@ali/seenew-front": "~0.0.219",
+    "@ali/seenew-front-utils": "~0.0.55"
+  },
+  "devDependencies": {
+    "@ali/seenew-test-util": "^1.0.10",
+    "@alife/dpl-hisblue": "latest",
+    "@babel/core": "^7.4.3",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.0",
+    "@types/react": "^16.8.11",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "chromedriver": "^80.0.1",
+    "codecov": "^3.3.0",
+    "concurrently": "^4.1.0",
+    "copyfiles": "^2.2.0",
+    "doctoc": "^1.4.0",
+    "dotenv-cli": "^2.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "^1.3.1",
+    "ice-plugin-fusion": "^0.1.7",
+    "jest": "^24.7.0",
+    "lerna": "^3.13.1",
+    "lint-staged": "^8.1.5",
+    "nightwatch": "^1.3.4",
+    "prettier": "^1.16.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-hooks-testing-library": "^0.4.0",
+    "ts-jest": "^24.0.1",
+    "typescript": "^3.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:xiniu/component-template.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "packages/**/src/**/*.{ts,tsx}"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "README.md": [
+      "doctoc"
+    ],
+    "docs/*.md": [
+      "doctoc"
+    ],
+    "**/*.md": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "author": "haomou.chh",
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

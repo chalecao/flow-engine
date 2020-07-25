@@ -1,0 +1,9 @@
+{
+  "type": "seenew",
+  "assets": {
+    "type": "builder",
+    "builder": {
+      "name": "@ali/builder-seenew"
+    }
+  }
+}

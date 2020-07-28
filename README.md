@@ -10,7 +10,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## @ali/seenew-flow-engine
+## flow-engine
 
 流程执行引擎，具体使用参考 test/unit/index.spec.js 测试用例
 
@@ -19,7 +19,7 @@
 ### 正常使用
 
 ```jsx
-import runnable from '@ali/seenew-flow-engine'
+import runnable from 'flow-engine'
 
 /**
  * aa1 aa2 aa3 先执行先返回，返回输入作为入参，然后到bb1，返回数据然后到cc1 cc2
@@ -53,7 +53,7 @@ runnable.excute(flowConfig, param ,()=>{
 - disableNodes:禁用节点名称，执行中会自动断掉对应节点流程
 
 ```jsx
-import runnable from '@ali/seenew-flow-engine'
+import runnable from 'flow-engine'
 
 /**
  * aa1 aa2 aa3 先执行先返回，返回输入作为入参，然后到bb1，返回数据然后到cc1 cc2
@@ -80,12 +80,6 @@ runnable.excute(flowConfig, param ,()=>{
 
 ```
 
-## 测试
+## LICENSE
 
-```
-def test
-```
-
-## 负责人
-
-皓眸，张亮亮
+MIT

@@ -1,0 +1,21 @@
+{
+  "compDir": "../comps",
+  "nodeSet": [
+    {
+      "node_id": "bb1",
+      "node_name": "bb1"
+    },
+    {
+      "node_id": "aa1",
+      "node_name": "aa1"
+    },
+    {
+      "node_id": "aa3",
+      "node_name": "aa3"
+    }
+  ],
+  "test": {
+    "config": [["aa3", "aa1"], "bb1"],
+    "mark": "测试"
+  }
+}

@@ -1,24 +1,20 @@
 {
-  "name": "@ali/seenew-flow-engine",
-  "version": "1.0.14",
+  "name": "flow-engine",
+  "version": "1.0.0",
   "description": "流程执行引擎",
   "main": "lib/index.js",
   "scripts": {
     "watch": "tsc -w",
-    "dev": "def dev",
-    "test": "def test",
+    "demo": "babel-node ./demo/test.js",
     "build": "rm -fr lib && tsc && copyfiles -u 1 ./src/**/*.scss ./src/*.scss ./lib",
-    "prepublishOnly": "tnpm version patch && git push",
+    "prepublishOnly": "npm version patch && git push",
     "postversion": "git push origin"
   },
-  "dependencies": {
-    "@ali/seenew-front": "~0.0.219",
-    "@ali/seenew-front-utils": "~0.0.55"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@ali/seenew-test-util": "^1.0.10",
-    "@alife/dpl-hisblue": "latest",
     "@babel/core": "^7.4.3",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
     "@types/jest": "^24.0.11",
     "@types/node": "^11.13.0",
     "@types/react": "^16.8.11",
@@ -90,9 +86,6 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "publishConfig": {
-    "registry": "http://registry.npm.alibaba-inc.com"
   },
   "author": "haomou.chh",
   "license": "ISC",

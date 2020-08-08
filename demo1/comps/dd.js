@@ -7,7 +7,7 @@
  */
 export default () => {
   // todo
-  let temp = 'cc';
-  console.log(temp);
-  return Promise.resolve({ cc: temp });
+  let temp = 'dd'
+  console.log(temp)
+  return Promise.resolve({ dd: temp });
 };

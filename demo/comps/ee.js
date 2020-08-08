@@ -7,7 +7,6 @@
  */
 export default () => {
   // todo
-  let temp = 'cc';
-  console.log(temp);
-  return Promise.resolve({ cc: temp });
+
+  return Promise.reject();
 };

@@ -6,13 +6,14 @@ const ONLY_CONSOLE = 2
 const initParam = {
     name: 123,
     debug: {
-        mod: ONLY_CONSOLE,
+        mode: ONLY_CONSOLE,
         disableNodes: []
     }
 }
 
 const scene = 'demo'
-runnable.excute(flowConfig(scene), initParam, () => {
+runnable.excute(flowConfig(scene), initParam, (data) => {
     console.log('callback executed!');
+    console.log(data);
 })
 

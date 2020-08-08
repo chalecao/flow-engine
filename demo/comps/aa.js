@@ -7,6 +7,7 @@
  */
 export default () => {
   // todo
-  console.log('aa')
-  return Promise.resolve();
+  let temp = 'aa';
+  console.log(temp);
+  return Promise.resolve({ aa: temp });
 };

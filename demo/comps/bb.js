@@ -7,6 +7,11 @@
  */
 export default () => {
   // todo
-  console.log('bb')
-  return Promise.reject();
+  let temp = 'bb';
+  console.log(temp);
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({ bb: temp })
+    }, 1000)
+  })
 };

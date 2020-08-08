@@ -1,6 +1,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [@ali/seenew-flow-engine](#aliseenew-flow-engine)
 - [用法](#%E7%94%A8%E6%B3%95)
   - [正常使用](#%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A8)
@@ -69,7 +70,7 @@ const ONLY_CONSOLE = 2
 const param = {
   name: 123,
   debug: {
-    mod: ONLY_DEBUG,
+    mode: ONLY_DEBUG,
     disableNodes:['xxxx']
     }
 }

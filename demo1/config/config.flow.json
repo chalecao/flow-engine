@@ -2,13 +2,9 @@
   "compDir": "../comps",
   "demo": {
     "config": [[["bb"], ["aa"]], "cc", "dd"],
-    "mark": "流程驱动演示"
+    "mark": "演示流程"
   },
   "nodeSet": [
-    {
-      "node_id": "ee",
-      "node_name": "ee节点"
-    },
     {
       "node_id": "aa",
       "node_name": "初始节点"

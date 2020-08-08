@@ -7,6 +7,7 @@
  */
 export default () => {
   // todo
-  console.log('dd')
-  return Promise.reject();
+  let temp = 'dd';
+  console.log(temp);
+  return Promise.resolve({ dd: temp });
 };

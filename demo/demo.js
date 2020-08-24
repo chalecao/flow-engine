@@ -1,5 +1,5 @@
-import runnable from '../src/index';
-import flowConfig from './config/index';
+import runnable from '../src/index'
+import flowConfig from './config/index'
 
 const scene = 'demo'
 
@@ -9,11 +9,11 @@ const initParam = {
     name: 123,
     debug: {
         mode: ONLY_CONSOLE,
-        disableNodes: []
-    }
+        disableNodes: [],
+    },
 }
 
 runnable.excute(flowConfig(scene), initParam, (data) => {
-    console.log('callback executed!');
-    console.log(data);
+    console.log('callback executed!')
+    console.log(data)
 })

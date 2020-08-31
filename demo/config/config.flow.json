@@ -1,7 +1,7 @@
 {
   "compDir": "../comps",
   "demo": {
-    "config": [[["bb"], ["aa"]], "cc", "dd"],
+    "config": [["bb", "aa"], "cc", "dd"],
     "mark": "流程驱动演示"
   },
   "nodeSet": [

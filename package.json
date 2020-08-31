@@ -1,5 +1,5 @@
 {
-  "name": "flow-engine",
+  "name": "@fed123/flow-engine",
   "version": "1.0.14",
   "description": "流程执行引擎",
   "main": "lib/index.js",
@@ -9,7 +9,7 @@
     "test": "def test",
     "demo": "babel-node ./demo/demo.js",
     "build": "rm -fr lib && tsc && copyfiles -u 1 ./src/**/*.scss ./src/*.scss ./lib",
-    "prepublishOnly": "cnpm version patch && git push",
+    "prepublishOnly": "npm version patch && git push",
     "postversion": "git push origin"
   },
   "dependencies": {},

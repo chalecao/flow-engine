@@ -1,6 +1,6 @@
 {
   "name": "@fed123/flow-engine",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "流程执行引擎",
   "main": "lib/index.js",
   "scripts": {

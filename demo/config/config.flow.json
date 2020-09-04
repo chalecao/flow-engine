@@ -1,7 +1,7 @@
 {
   "compDir": "../comps",
   "demo": {
-    "config": [["bb", "aa"], "cc", "dd"],
+    "config": [[["aa"], ["bb"]], "cc", "dd"],
     "mark": "流程驱动演示"
   },
   "nodeSet": [
@@ -10,11 +10,11 @@
       "node_name": "ee节点"
     },
     {
-      "node_id": "aa",
+      "node_id": "bb",
       "node_name": "初始节点"
     },
     {
-      "node_id": "bb",
+      "node_id": "aa",
       "node_name": "初始节点"
     },
     {

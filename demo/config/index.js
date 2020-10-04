@@ -1,11 +1,13 @@
-import aa1 from '../comps/aa1';
-import aa3 from '../comps/aa3';
-import bb1 from '../comps/bb1';
+import aa from '../comps/aa';
+import bb from '../comps/bb';
+import cc from '../comps/cc';
+import dd from '../comps/dd';
+import ee from '../comps/ee';
 import config from './config.flow.json';
 
 export default scene => ({
   config: config[scene] && config[scene].config,
   comps: {
-    aa1,aa3,bb1
+    aa,bb,cc,dd,ee
   },
 });

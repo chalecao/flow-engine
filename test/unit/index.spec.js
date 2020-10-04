@@ -65,22 +65,22 @@ const cc2 = (params) => {
 }
 
 const config = {
-  zheyi: [
+  normal1: [
     [aa1, aa3],
     [bb1],
     [cc2, cc1],
   ],
-  tiantai: [
+  normal2: [
     [aa1, aa2],
     [bb1],
     [cc2],
   ],
-  weishan: [
+  normal3: [
     [aa1, aa2(), aa3()],
     bb1,
     [cc1, cc2],
   ],
-  embed: [
+  embed1: [
     [[cc1, cc2], aa2(700), aa3(800)],
     bb1,
     [aa2(400), aa3()],
@@ -95,7 +95,7 @@ const config = {
 describe('测试流程执行器', function () {
   it('通过log测试', function (done) {
     info = []
-    runnable.excute(config['weishan'])
+    runnable.excute(config['normal3'])
     setTimeout(() => {
       expect(JSON.stringify(info)).to.be.equal(JSON.stringify(['aa1', 'aa2', 'aa3', 'bb1', 'cc1', 'cc2']));
       done();
@@ -104,13 +104,13 @@ describe('测试流程执行器', function () {
   });
 
   it('通过返回值测试', async function () {
-    await runnable.excute(config['weishan'], { 11: 11 }, (result) => {
+    await runnable.excute(config['normal3'], { 11: 11 }, (result) => {
       expect(JSON.stringify(result)).to.be.equal(JSON.stringify({ 11: 11, "aa1": "aa1", "bb1": "bb1", "cc1": "cc1" }));
     })
   });
 
   it('嵌套流程测试', async () => {
-    await runnable.excute(config['embed'], { 11: 11 }, (result) => {
+    await runnable.excute(config['embed1'], { 11: 11 }, (result) => {
       expect(JSON.stringify(result)).to.be.equal(JSON.stringify({ "11": 11, "cc1": "cc1", "cc2": "cc2", "bb1": "bb1", "aa3": "aa3" }));
     })
   });

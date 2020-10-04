@@ -1,21 +1,29 @@
 {
   "compDir": "../comps",
+  "demo": {
+    "config": [[["aa"], ["bb"]], "cc", "dd"],
+    "mark": "流程驱动演示"
+  },
   "nodeSet": [
     {
-      "node_id": "bb1",
-      "node_name": "bb1"
+      "node_id": "ee",
+      "node_name": "ee节点"
     },
     {
-      "node_id": "aa1",
-      "node_name": "aa1"
+      "node_id": "bb",
+      "node_name": "初始节点"
     },
     {
-      "node_id": "aa3",
-      "node_name": "aa3"
+      "node_id": "aa",
+      "node_name": "初始节点"
+    },
+    {
+      "node_id": "cc",
+      "node_name": "初始节点"
+    },
+    {
+      "node_id": "dd",
+      "node_name": "初始节点"
     }
-  ],
-  "test": {
-    "config": [["aa3", "aa1"], "bb1"],
-    "mark": "测试"
-  }
+  ]
 }

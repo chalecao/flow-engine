@@ -1,11 +1,13 @@
 {
-  "name": "flow-engine",
-  "version": "1.0.0",
+  "name": "@fed123/flow-engine",
+  "version": "1.0.17",
   "description": "流程执行引擎",
   "main": "lib/index.js",
   "scripts": {
     "watch": "tsc -w",
-    "demo": "babel-node ./demo/test.js",
+    "dev": "def dev",
+    "test": "def test",
+    "demo": "babel-node ./demo/demo.js",
     "build": "rm -fr lib && tsc && copyfiles -u 1 ./src/**/*.scss ./src/*.scss ./lib",
     "prepublishOnly": "npm version patch && git push",
     "postversion": "git push origin"
@@ -14,7 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
     "@types/jest": "^24.0.11",
     "@types/node": "^11.13.0",
     "@types/react": "^16.8.11",
@@ -35,7 +37,6 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
     "husky": "^1.3.1",
-    "ice-plugin-fusion": "^0.1.7",
     "jest": "^24.7.0",
     "lerna": "^3.13.1",
     "lint-staged": "^8.1.5",
@@ -46,10 +47,6 @@
     "react-hooks-testing-library": "^0.4.0",
     "ts-jest": "^24.0.1",
     "typescript": "^3.4.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.alibaba-inc.com:xiniu/component-template.git"
   },
   "keywords": [
     "react"
@@ -87,7 +84,7 @@
       "git add"
     ]
   },
-  "author": "haomou.chh",
+  "author": "haomou",
   "license": "ISC",
   "browserslist": {
     "production": [

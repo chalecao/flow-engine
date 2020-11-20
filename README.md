@@ -38,6 +38,8 @@ runnable.excute(flowConfig, param ,()=>{
 })
 
 ```
+说明：原子函数 aa1，aa2 中数据执行流程正常 return 或者 promise.resolve，终止分支流程使用 promise.reject
+
 
 ### 调试模式使用
 
